@@ -20,7 +20,7 @@ namespace WPSConvertisseur.Controllers
             devises.Add(new Devise(3, "Yen", 120));
 
         }
-        // GET: api/<DevisesController>
+        // GET: api/<DevisesController> 
         [HttpGet]
         public IEnumerable<Devise> GetAll()
         {
