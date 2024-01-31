@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPSConvertisseur", "WPSConvertisseur.csproj", "{5793D144-C3B2-4026-9C7E-0142AFCB3E29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPSConvertisseur", "WPSConvertisseur.csproj", "{5793D144-C3B2-4026-9C7E-0142AFCB3E29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPSConvertisseurTests", "..\WPSConvertisseurTests\WPSConvertisseurTests.csproj", "{5903433A-E88C-47D6-A87B-7D752F628100}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5793D144-C3B2-4026-9C7E-0142AFCB3E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5793D144-C3B2-4026-9C7E-0142AFCB3E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5793D144-C3B2-4026-9C7E-0142AFCB3E29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5903433A-E88C-47D6-A87B-7D752F628100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5903433A-E88C-47D6-A87B-7D752F628100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5903433A-E88C-47D6-A87B-7D752F628100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5903433A-E88C-47D6-A87B-7D752F628100}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
