@@ -19,10 +19,6 @@ namespace WPSConvertisseur.Controllers
             devises.Add(new Devise(2, "Franc Suisse", 1.07));
             devises.Add(new Devise(3, "Yen", 120));
 
-
-
-
-
         }
         // GET: api/<DevisesController>
         [HttpGet]
@@ -45,20 +41,53 @@ namespace WPSConvertisseur.Controllers
 
         // POST api/<DevisesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<Devise> Post([FromBody] Devise devise)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            devises.Add(devise);
+            return CreatedAtRoute("GetDevise", new { id = devise.Id }, devise);
         }
 
         // PUT api/<DevisesController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public ActionResult Put(int id, [FromBody] Devise devise)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            if (id != devise.Id)
+            {
+                return BadRequest();
+            }
+            int index = devises.FindIndex((d) => d.Id == id);
+            if (index < 0)
+            {
+                return NotFound();
+            }
+            devises[index] = devise;
+            return NoContent();
         }
 
         // DELETE api/<DevisesController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult<Devise> Delete(int id)
         {
+
+            Devise? devise = devises.FirstOrDefault((d) => d.Id == id);
+            if (devise == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                devises.Remove(devise);
+            }
+            return devise;
+
         }
     }
 }
